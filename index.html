@@ -9,50 +9,58 @@
 <body>
   <center>
     <h1>Permissão para Dirigir</h1>
-
-    <script>
-      var idade = parseInt(prompt("Digite sua idade:"));
-      var carteira = prompt("Você possui carteira de motorista? (sim ou não)").toLowerCase();
-
-      if (idade >= 18 && carteira === "sim") {
-        document.write("<p>Você pode dirigir.</p><br>");
-      } else {
-        document.write("<p>Você não pode dirigir.</p><br>");
-      }
-    </script>
+    <div id="dirigir"></div>
 
     <hr>
 
     <h1>Média do Aluno</h1>
-
-    <script>
-      var nota1 = parseFloat(prompt("Digite a primeira nota:"));
-      var nota2 = parseFloat(prompt("Digite a segunda nota:"));
-      var nota3 = parseFloat(prompt("Digite a terceira nota:"));
-      var nota4 = parseFloat(prompt("Digite a quarta nota:"));
-
-      var media = (nota1 + nota2 + nota3 + nota4) / 4;
-
-      if (media >= 7) {
-        document.write("<p>Aluno aprovado! A média foi: " + media + "</p><br>");
-      } else {
-        document.write("<p>Aluno reprovado. A média foi: " + media + "</p><br>");
-      }
-    </script>
+    <div id="media"></div>
 
     <hr>
 
     <h1>Verificação de Aposentadoria por Idade</h1>
+    <div id="aposentadoria"></div>
 
     <script>
+      // Permissão para Dirigir
+      var idade = parseInt(prompt("Digite sua idade:"));
+      var carteira = prompt("Você possui carteira de motorista? (sim ou não)").toLowerCase();
+      var resultadoDirigir = "";
+      if (idade >= 18 && carteira === "sim") {
+        resultadoDirigir = "Você pode dirigir.";
+      } else {
+        resultadoDirigir = "Você não pode dirigir.";
+      }
+      document.getElementById("dirigir").innerHTML = "<p>" + resultadoDirigir + "</p>";
+    </script>
+
+    <script>
+      // Média do Aluno
+      var nota1 = parseFloat(prompt("Digite a primeira nota:"));
+      var nota2 = parseFloat(prompt("Digite a segunda nota:"));
+      var nota3 = parseFloat(prompt("Digite a terceira nota:"));
+      var nota4 = parseFloat(prompt("Digite a quarta nota:"));
+      var media = (nota1 + nota2 + nota3 + nota4) / 4;
+      var resultadoMedia = "";
+      if (media >= 7) {
+        resultadoMedia = "Aluno aprovado! A média foi: " + media;
+      } else {
+        resultadoMedia = "Aluno reprovado. A média foi: " + media;
+      }
+      document.getElementById("media").innerHTML = "<p>" + resultadoMedia + "</p>";
+    </script>
+
+    <script>
+      // Aposentadoria por Idade
       var idadeAposent = parseInt(prompt("Digite sua idade:"));
       var sexo = prompt("Digite seu sexo (masculino ou feminino):").toLowerCase();
-
+      var resultadoAposentadoria = "";
       if ((sexo === "feminino" && idadeAposent >= 60) || (sexo === "masculino" && idadeAposent >= 65)) {
-        document.write("<p>Você pode solicitar a aposentadoria por idade.</p>");
+        resultadoAposentadoria = "Você pode solicitar a aposentadoria por idade.";
       } else {
-        document.write("<p>Você ainda não pode solicitar a aposentadoria por idade.</p>");
+        resultadoAposentadoria = "Você ainda não pode solicitar a aposentadoria por idade.";
       }
+      document.getElementById("aposentadoria").innerHTML = "<p>" + resultadoAposentadoria + "</p>";
     </script>
   </center>
 </body>
