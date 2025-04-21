@@ -2,66 +2,16 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aula IF ELSE - Exercícios</title>
+  <title>Menu de Exercícios IF ELSE</title>
 </head>
 <body>
   <center>
-    <h1>Permissão para Dirigir</h1>
-    <div id="dirigir"></div>
-
-    <hr>
-
-    <h1>Média do Aluno</h1>
-    <div id="media"></div>
-
-    <hr>
-
-    <h1>Verificação de Aposentadoria por Idade</h1>
-    <div id="aposentadoria"></div>
-
-    <script>
-      // Permissão para Dirigir
-      var idade = parseInt(prompt("Digite sua idade:"));
-      var carteira = prompt("Você possui carteira de motorista? (sim ou não)").toLowerCase();
-      var resultadoDirigir = "";
-      if (idade >= 18 && carteira === "sim") {
-        resultadoDirigir = "Você pode dirigir.";
-      } else {
-        resultadoDirigir = "Você não pode dirigir.";
-      }
-      document.getElementById("dirigir").innerHTML = "<p>" + resultadoDirigir + "</p>";
-    </script>
-
-    <script>
-      // Média do Aluno
-      var nota1 = parseFloat(prompt("Digite a primeira nota:"));
-      var nota2 = parseFloat(prompt("Digite a segunda nota:"));
-      var nota3 = parseFloat(prompt("Digite a terceira nota:"));
-      var nota4 = parseFloat(prompt("Digite a quarta nota:"));
-      var media = (nota1 + nota2 + nota3 + nota4) / 4;
-      var resultadoMedia = "";
-      if (media >= 7) {
-        resultadoMedia = "Aluno aprovado! A média foi: " + media;
-      } else {
-        resultadoMedia = "Aluno reprovado. A média foi: " + media;
-      }
-      document.getElementById("media").innerHTML = "<p>" + resultadoMedia + "</p>";
-    </script>
-
-    <script>
-      // Aposentadoria por Idade
-      var idadeAposent = parseInt(prompt("Digite sua idade:"));
-      var sexo = prompt("Digite seu sexo (masculino ou feminino):").toLowerCase();
-      var resultadoAposentadoria = "";
-      if ((sexo === "feminino" && idadeAposent >= 60) || (sexo === "masculino" && idadeAposent >= 65)) {
-        resultadoAposentadoria = "Você pode solicitar a aposentadoria por idade.";
-      } else {
-        resultadoAposentadoria = "Você ainda não pode solicitar a aposentadoria por idade.";
-      }
-      document.getElementById("aposentadoria").innerHTML = "<p>" + resultadoAposentadoria + "</p>";
-    </script>
+    <h1>Exercícios IF ELSE</h1>
+    <ul>
+      <li><a href="media.html">Média do Aluno</a></li>
+      <li><a href="permissao.html">Permissão para Dirigir</a></li>
+      <li><a href="aposentadoria.html">Aposentadoria</a></li>
+    </ul>
   </center>
 </body>
 </html>
