@@ -15,9 +15,9 @@
       var carteira = prompt("Você possui carteira de motorista? (sim ou não)").toLowerCase();
 
       if (idade >= 18 && carteira === "sim") {
-        document.write("Você pode dirigir.");
+        document.write("<p>Você pode dirigir.</p><br>");
       } else {
-        document.write("Você não pode dirigir.");
+        document.write("<p>Você não pode dirigir.</p><br>");
       }
     </script>
 
@@ -34,9 +34,9 @@
       var media = (nota1 + nota2 + nota3 + nota4) / 4;
 
       if (media >= 7) {
-        document.write("Aluno aprovado! A média foi: " + media);
+        document.write("<p>Aluno aprovado! A média foi: " + media + "</p><br>");
       } else {
-        document.write("Aluno reprovado. A média foi: " + media);
+        document.write("<p>Aluno reprovado. A média foi: " + media + "</p><br>");
       }
     </script>
 
@@ -49,9 +49,9 @@
       var sexo = prompt("Digite seu sexo (masculino ou feminino):").toLowerCase();
 
       if ((sexo === "feminino" && idadeAposent >= 60) || (sexo === "masculino" && idadeAposent >= 65)) {
-        document.write("Você pode solicitar a aposentadoria por idade.");
+        document.write("<p>Você pode solicitar a aposentadoria por idade.</p>");
       } else {
-        document.write("Você ainda não pode solicitar a aposentadoria por idade.");
+        document.write("<p>Você ainda não pode solicitar a aposentadoria por idade.</p>");
       }
     </script>
   </center>
